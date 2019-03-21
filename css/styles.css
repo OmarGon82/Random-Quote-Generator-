@@ -70,7 +70,7 @@ body {
   content: ", ";
   font-style: normal;
 }
-
+/*added a category class */
 .category:before {
   content: ", ";
   font-style: normal;

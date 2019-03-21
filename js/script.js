@@ -2,18 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+//created an array of objects. Each object has 5 properties. The array contains 10 objects.
 var quotes = [
   {
     quote: 'The key to parenting is don’t overthink it. Because overthinking leads to...what were talking about?',
@@ -95,35 +84,21 @@ var quotes = [
 ]
 
 
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   -use the random number to `return` a random quote object from the `quotes` array.
-***/
+//created the function getRandomQuote ()
 function getRandomQuote() {
-  var randomNum = Math.floor(Math.random() * quotes.length) 
-  return quotes[randomNum];
+  var randomNum = Math.floor(Math.random() * quotes.length) // created a var named randomNum to hold the number generate by the Math.floor function
+  return quotes[randomNum]; //returns the quotes array index for the random number ex quotes[5] 5 being the random number generated. (5 would be the Millhouse quote)
 }
 
-
-
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
+//created the printQuote function
 function printQuote(){
-  randQuote = getRandomQuote();
-  message = ''
-  message += '<p class="quote">' + randQuote.quote + '</p>';
-  message += '<p class="source">'  + randQuote.source;
+  randQuote = getRandomQuote(); //created a variable to hold and call the getRandomQuote function
+  message = '' //created a varible message to hold and empty string so I can build my output message.
+  message += '<p class="quote">' + randQuote.quote + '</p>';//added to the message variable and accessed the quote from the random quote generated. I used dot notation
+  message += '<p class="source">'  + randQuote.source;//accessed the source from the quote object using dot notation.
+  /* for this section I used a conditional statement to check if the citation, year and category properties existed in the random object generated.
+  if they exist or if the statment is true then update the message variable. If it's not to then the code doesn't run.
+  */
   if  (randQuote.citation) {
     message += '<span class="citation">' + randQuote.citation+ '</span>';
   }
@@ -133,11 +108,11 @@ function printQuote(){
   if (randQuote.category) {
     message += '<span class="category">' + randQuote.category + '</span>';
   }
-  message += '</p>'
-  return message;
+  message += '</p>' //close off the <p> tag that was opened when I added the .source property
+  return message; //finally return the message.
   
 }
-document.getElementById("quote-box").innerHTML = printQuote();
+document.getElementById("quote-box").innerHTML = printQuote(); //add everything to the quote-box id in the div tag.
 
 
 
@@ -151,4 +126,3 @@ document.getElementById("quote-box").innerHTML = printQuote();
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
