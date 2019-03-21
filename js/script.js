@@ -14,7 +14,85 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
+var quotes = [
+  {
+    quote: 'The key to parenting is don’t overthink it. Because overthinking leads to...what were talking about?',
+    source: 'Granmpa Simpson',
+    year: 1994,
+    citation: 'Grampa Vs. Sexual Inadequacy',
+    category: 'Family'
+  },
+  {
+    quote: 'Well, it’s 1 AM. Better go home and spend some quality time with the kids.',
+    source: 'Homer Simpson',
+    year: 1997,
+    citation: 'The Springfield Files',
+    category: 'Family'
+  },
+  {
+    quote: 'Marriage is like a coffin, and each kid is another nail.',
+    source: 'Homer Simpson',
+    year : 2002,
+    citation: 'How I Spent My Strummer Vacation',
+    category: 'Marriage'
+  },
+  {
+    quote: 'Our differences are only skin deep, but our sames go down to the bone.',
+    source: 'Marge Simpson',
+    year: 1997,
+  category: 'Marriage'
+  },
+  {
+    quote: 'You don’t win friends with salad.',
+    source: 'Homer, Bart, and Marge',
+    year: 1995,
+    citation: 'Lisa the Vegetarian',
+    category: 'Friedship'
 
+  },
+  {
+    quote: 'No way, Bart. If I lean over, I leave myself open to wedgies, wet willies, or even the dreaded rear-admiral!',
+    source: 'Millhouse',
+    year: 1993,
+    citation: 'Treehouse of Horror IV',
+    category: 'Friendship'
+  },
+  {
+    quote: 'Most of you will never fall in love, and marry out of fear of dying alone.',
+    source: 'Edna Krabappel',
+    year: 1992,
+    citation: 'Bart\'s Friend Falls in Love',
+    category: 'Love'
+  },
+  {
+    quote: 'Step aside everyone! Sensitive love letters are my specialty.\'Dear Baby, Welcome to Dumpsville. Population: you.',
+    source: 'Homer Simpson',
+    year: 1992,
+    citation: 'Bart the Lover',
+    category: 'Love'
+  },
+  {
+    quote: 'Son when you participate in sport events- its not whether you win or lose, it\'s how drunk you get',
+    source: 'Homer Simpson',
+    year: 1994,
+    citation: 'Bart Gets an Elephant',
+    category: 'Sports'
+  },
+  {
+    quote: 'Son when you participate in sport events- its not whether you win or lose, it\'s how drunk you get',
+    source: 'Homer Simpson',
+    year: 1994,
+    citation: 'Bart Gets an Elephant',
+    category: 'Sports'
+  },
+  {
+    quote: 'Come on, Bart! Remember what Vince Lombardi said: \'If you lose, you\'re out of the family!',
+    source: 'Homer Simpson',
+    year: 1990,
+    citation: 'Dead Putting Society',
+    category: 'Sports'
+  }
+]
 
 
 /***
