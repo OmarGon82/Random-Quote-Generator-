@@ -71,7 +71,10 @@ body {
   font-style: normal;
 }
 
-
+.category:before {
+  content: ", ";
+  font-style: normal;
+}
 
 #loadQuote {
   position: fixed;
