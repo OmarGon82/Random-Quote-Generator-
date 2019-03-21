@@ -100,7 +100,10 @@ var quotes = [
    - Create a variable to store a random number 
    -use the random number to `return` a random quote object from the `quotes` array.
 ***/
-
+function getRandomQuote() {
+  var randomNum = Math.floor(Math.random() * quotes.length) 
+  return quotes[randomNum];
+}
 
 
 
