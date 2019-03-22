@@ -114,8 +114,19 @@ function printQuote(){
 }
 document.getElementById("quote-box").innerHTML = printQuote(); //add everything to the quote-box id in the div tag.
 
-
-
+//I used the same function we learned on loops video 8 challenge 2 to create a random number
+function randomRGB() {
+  return Math.floor(Math.random() * 256 ); 
+ }
+ // I modified the function from loops video 8 challenge 2 to return a single random color
+ function randomColor() {
+  var color = '#'
+  color += randomRGB();
+  return color;
+}
+// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp I added the an id to the html and called it.
+ document.getElementById("color").style.backgroundColor = randomColor();
+ 
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
