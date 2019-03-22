@@ -112,7 +112,12 @@ function printQuote(){
   return message; //finally return the message.
   
 }
-document.getElementById("quote-box").innerHTML = printQuote(); //add everything to the quote-box id in the div tag.
+var quoteBox = document.getElementById("quote-box"); //make a variable to store the HTML DOM 
+
+var quoteInterval = setInterval(setQuote, 5000 );//created a variable for and it to hold the setInterval function and refernce the setQuote function
+function setQuote() {
+ quoteBox = document.getElementById("quote-box").innerHTML = printQuote();//set the quoteBox variable to the HTML DOM with the printQuote function.
+}
 
 //I used the same function we learned on loops video 8 challenge 2 to create a random number
 function randomHex() {
@@ -125,15 +130,20 @@ function randomHex() {
   color += randomHex();
   return color;
 }
-// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp I added the an id to the html and called it.
- document.getElementById("color").style.backgroundColor = randomColor();
  
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
+// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp I added the an id to the html and called it.
+ //document.getElementById("color").style.backgroundColor = randomColor(); 
+ 
+ //first I made a variable to hold the setInterval function and referenced the setColor function
+ var colorInterval = setInterval(setColor, 5000 );
+ 
+ var color = document.getElementById("color");//creted another variable to hold the HTML DOM
+ // created a setColor color function and have it
+ function setColor() {
+    color = document.getElementById("color").style.backgroundColor = randomColor();//added the randomColor function to the HTML DOM
+   
+}
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
