@@ -69,13 +69,6 @@ var quotes = [
     category: 'Sports'
   },
   {
-    quote: 'Son when you participate in sport events- its not whether you win or lose, it\'s how drunk you get',
-    source: 'Homer Simpson',
-    year: 1994,
-    citation: 'Bart Gets an Elephant',
-    category: 'Sports'
-  },
-  {
     quote: 'Come on, Bart! Remember what Vince Lombardi said: \'If you lose, you\'re out of the family!',
     source: 'Homer Simpson',
     year: 1990,
