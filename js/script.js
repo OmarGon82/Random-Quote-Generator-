@@ -29,7 +29,8 @@ var quotes = [
     quote: 'Our differences are only skin deep, but our sames go down to the bone.',
     source: 'Marge Simpson',
     year: 1997,
-  category: 'Marriage'
+    citation: 'The Mysterious Voyage of Homer',
+    category: 'Marriage'
   },
   {
     quote: 'You don’t win friends with salad.',
@@ -109,15 +110,11 @@ function printQuote(){
     message += '<span class="category">' + randQuote.category + '</span>';
   }
   message += '</p>' //close off the <p> tag that was opened when I added the .source property
-  return message; //finally return the message.
-  
-}
-var quoteBox = document.getElementById("quote-box"); //make a variable to store the HTML DOM 
+  return  document.getElementById("quote-box").innerHTML = message; //finally return the message so that it works when the button is clicked.
+  }
 
-var quoteInterval = setInterval(setQuote, 5000 );//created a variable for and it to hold the setInterval function and refernce the setQuote function
-function setQuote() {
- quoteBox = document.getElementById("quote-box").innerHTML = printQuote();//set the quoteBox variable to the HTML DOM with the printQuote function.
-}
+var quoteInterval = setInterval(printQuote, 5000 );//created a variable for and it to hold the setInterval function and refernce the printQuote function
+
 
 //I used the same function we learned on loops video 8 challenge 2 to create a random number
 function randomHex() {
@@ -136,12 +133,11 @@ function randomHex() {
  
  //first I made a variable to hold the setInterval function and referenced the setColor function
  var colorInterval = setInterval(setColor, 5000 );
- 
- var color = document.getElementById("color");//creted another variable to hold the HTML DOM
+
+ //creted another variable to hold the HTML DOM
  // created a setColor color function and have it
  function setColor() {
-    color = document.getElementById("color").style.backgroundColor = randomColor();//added the randomColor function to the HTML DOM
-   
+   document.getElementById("color").style.backgroundColor = randomColor();//inside this function I the HTML DOM
 }
 
 
