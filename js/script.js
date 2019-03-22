@@ -112,7 +112,7 @@ function printQuote(){
   message += '</p>' //close off the <p> tag that was opened when I added the .source property
   return  document.getElementById("quote-box").innerHTML = message; //finally return the message so that it works when the button is clicked.
   }
-
+// I https://www.w3schools.com/jsref/met_win_setinterval.asp to help me with this function.
 var quoteInterval = setInterval(printQuote, 5000 );//created a variable for and it to hold the setInterval function and refernce the printQuote function
 
 
@@ -125,22 +125,16 @@ function randomHex() {
  function randomColor() {
   var color = '#'
   color += randomHex();
-  return color;
+  return document.getElementById("color").style.backgroundColor = color;
 }
  
-// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp I added the an id to the html and called it.
- //document.getElementById("color").style.backgroundColor = randomColor(); 
- 
- //first I made a variable to hold the setInterval function and referenced the setColor function
- var colorInterval = setInterval(setColor, 5000 );
+// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp 
+//I made a variable to hold the setInterval function and referenced the randomColor function
+var colorInterval = setInterval(randomColor, 5000 );
 
- //creted another variable to hold the HTML DOM
- // created a setColor color function and have it
- function setColor() {
-   document.getElementById("color").style.backgroundColor = randomColor();//inside this function I the HTML DOM
-}
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+ 
 
 
