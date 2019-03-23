@@ -114,29 +114,28 @@ function printQuote(){
   message += '</p>' //close off the <p> tag that was opened when I added the .source property
   document.getElementById("quote-box").innerHTML = message; //print  the message so that it works when the button is clicked.
   }
-// I https://www.w3schools.com/jsref/met_win_setinterval.asp to help me with this function.
-//I made a variable to hold the setInterval function and referenced the printQuote function, set it to 5 seconds.
-var quoteInterval = setInterval(printQuote, 5000 );
+  //I used the same function we learned on loops video 8 challenge 2 to create a random number
+  function randomHex() {
+  // I decided to use until 500 because the lower numbers seem to give darker colors. I didn't want light colors to make the text difficult to read.
+    return Math.floor(Math.random() * 500); 
+   }
+   // I modified the function from loops video 8 challenge 2 to return a single random color
+   function randomColor() {
+    var color = '#'
+    color += randomHex();
+    document.getElementById("color").style.backgroundColor = color; //change the background color to random color.
+  }
+   
+  // with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp 
+ // I made a function setInterval function that calls both radomColor and randomQuote and sets the to change at 5 sec intervals.
+  setInterval(function () {
+    randomColor();
+    printQuote();
+  }, 5000);
+  //added another event listener to change the color as well as the quote when the button is clicked
+  document.getElementById('loadQuote').addEventListener("click", randomColor, false);
+  document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-//I used the same function we learned on loops video 8 challenge 2 to create a random number
-function randomHex() {
-// I decided to use until 500 because the lower numbers seem to give darker colors. I didn't want light colors to make the text difficult to read.
-  return Math.floor(Math.random() * 500); 
- }
- // I modified the function from loops video 8 challenge 2 to return a single random color
- function randomColor() {
-  var color = '#'
-  color += randomHex();
-  document.getElementById("color").style.backgroundColor = color; //change the background color to random color.
-}
- 
-// with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp 
-//I made a variable to hold the setInterval function and referenced the randomColor function, set it to 5 seconds.
-var colorInterval = setInterval(randomColor, 5000 );
-
-//added another event listener to change the color as well as the quote when the button is clicked
-document.getElementById('loadQuote').addEventListener("click", randomColor, false);
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
