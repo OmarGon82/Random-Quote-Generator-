@@ -113,7 +113,7 @@ function printQuote(){
   }
   message += '</p>' //close off the <p> tag that was opened when I added the .source property
   document.getElementById("quote-box").innerHTML = message; //print  the message so that it works when the button is clicked.
-  randomColor();
+  randomColor(); //added the randomColor function so that it gets passed through the addEventListner and back ground changes when the button is clicked.
   }
   //I used the same function we learned on loops video 8 challenge 2 to create a random number
   function randomHex() {
