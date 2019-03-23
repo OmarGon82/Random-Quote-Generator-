@@ -132,6 +132,8 @@ function printQuote(){
     randomColor();
     printQuote();
   }, 5000);
+
+  
   //added another event listener to change the color as well as the quote when the button is clicked
   document.getElementById('loadQuote').addEventListener("click", randomColor, false);
   document.getElementById('loadQuote').addEventListener("click", printQuote, false);
