@@ -2,6 +2,14 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
+
+/* Thank you for taking the time to review my project. I had a lot of fun choosing the quotes and trying for "exceeds expectatioins".
+If my project doesn't meet all the exceeds expectations requirements I would like it not get a passing grade so I can make adjustments.
+I hope you are a Simpsons fan and enjoy the quotes :)
+*/ 
+
+
+
 //created an array of objects. Each object has 5 properties. The array contains 10 objects.
 var quotes = [
   {
@@ -81,7 +89,8 @@ var quotes = [
 //created the function getRandomQuote ()
 function getRandomQuote() {
   var randomNum = Math.floor(Math.random() * quotes.length) // created a var named randomNum to hold the number generate by the Math.floor function
-  return quotes[randomNum]; //returns the quotes array index for the random number ex quotes[5] 5 being the random number generated. (5 would be the Millhouse quote)
+ //returns the quotes array index for the random number ex quotes[5] 5 being the random number generated. (5 would be the Millhouse quote)
+  return quotes[randomNum]; 
 }
 
 //created the printQuote function
@@ -106,7 +115,8 @@ function printQuote(){
   document.getElementById("quote-box").innerHTML = message; //print  the message so that it works when the button is clicked.
   }
 // I https://www.w3schools.com/jsref/met_win_setinterval.asp to help me with this function.
-var quoteInterval = setInterval(printQuote, 5000 );//created a variable for and it to hold the setInterval function and refernce the printQuote function
+//I made a variable to hold the setInterval function and referenced the printQuote function, set it to 5 seconds.
+var quoteInterval = setInterval(printQuote, 5000 );
 
 
 //I used the same function we learned on loops video 8 challenge 2 to create a random number
@@ -118,13 +128,15 @@ function randomHex() {
  function randomColor() {
   var color = '#'
   color += randomHex();
-  document.getElementById("color").style.backgroundColor = color; //change the background color.
+  document.getElementById("color").style.backgroundColor = color; //change the background color to random color.
 }
  
 // with help from this source: https://www.w3schools.com/jsref/prop_html_style.asp 
-//I made a variable to hold the setInterval function and referenced the randomColor function,
+//I made a variable to hold the setInterval function and referenced the randomColor function, set it to 5 seconds.
 var colorInterval = setInterval(randomColor, 5000 );
 
-//added another event listener to change the color as well as the code when the button is clicked
+//added another event listener to change the color as well as the quote when the button is clicked
 document.getElementById('loadQuote').addEventListener("click", randomColor, false);
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+
